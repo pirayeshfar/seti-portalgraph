@@ -1,0 +1,90 @@
+<svg width="1200" height="675" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111827"/>
+      <stop offset="100%" style="stop-color:#1f2937"/>
+    </linearGradient>
+    <linearGradient id="cyan2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg2)"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="1200" height="60" fill="#000" fill-opacity="0.3"/>
+  <text x="30" y="38" font-family="Arial" font-size="20" font-weight="bold" fill="url(#cyan2)">🔮 SETI@Portalgraph</text>
+  
+  <!-- Active camera button -->
+  <rect x="850" y="15" width="120" height="30" rx="6" fill="#059669"/>
+  <text x="910" y="35" font-family="Arial" font-size="12" fill="white" text-anchor="middle">⏹️ توقف</text>
+  
+  <!-- 3D Scene -->
+  <rect x="20" y="70" width="900" height="520" rx="10" fill="#000" fill-opacity="0.5"/>
+  
+  <!-- Grid with perspective shift -->
+  <g opacity="0.3" stroke="#06b6d4" stroke-width="0.5">
+    <line x1="80" y1="500" x2="840" y2="500"/>
+    <line x1="120" y1="520" x2="800" y2="520"/>
+    <line x1="160" y1="540" x2="760" y2="540"/>
+    <!-- Shifted perspective (tracking effect) -->
+    <line x1="520" y1="280" x2="80" y2="560"/>
+    <line x1="520" y1="280" x2="250" y2="560"/>
+    <line x1="520" y1="280" x2="420" y2="560"/>
+    <line x1="520" y1="280" x2="590" y2="560"/>
+    <line x1="520" y1="280" x2="760" y2="560"/>
+  </g>
+  
+  <!-- 3D Character - rotated view -->
+  <g transform="translate(480, 350) rotate(-10)" filter="url(#glow2)">
+    <ellipse cx="0" cy="120" rx="60" ry="15" fill="#06b6d4" opacity="0.3"/>
+    <rect x="-25" y="20" width="50" height="70" rx="5" fill="none" stroke="#06b6d4" stroke-width="2"/>
+    <rect x="-20" y="25" width="40" height="60" rx="3" fill="#06b6d4" opacity="0.2"/>
+    <circle cx="0" cy="-20" r="35" fill="none" stroke="#06b6d4" stroke-width="2"/>
+    <circle cx="0" cy="-20" r="28" fill="#06b6d4" opacity="0.15"/>
+    <line x1="-25" y1="30" x2="-55" y2="70" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+    <line x1="25" y1="30" x2="55" y2="70" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+    <line x1="-10" y1="90" x2="-20" y2="130" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="90" x2="20" y2="130" stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Camera Preview Panel -->
+  <rect x="940" y="70" width="240" height="200" rx="10" fill="#000" fill-opacity="0.8" stroke="#06b6d4" stroke-width="2"/>
+  <text x="1060" y="95" font-family="Arial" font-size="12" fill="#06b6d4" text-anchor="middle">🎥 Tracking Active</text>
+  
+  <!-- Simulated camera feed -->
+  <rect x="955" y="105" width="210" height="150" rx="5" fill="#1a1a2e"/>
+  
+  <!-- Face outline in camera -->
+  <ellipse cx="1060" cy="170" rx="35" ry="45" fill="none" stroke="#06b6d4" stroke-width="2" stroke-dasharray="5,3"/>
+  <circle cx="1045" cy="160" r="5" fill="#06b6d4" opacity="0.5"/>
+  <circle cx="1075" cy="160" r="5" fill="#06b6d4" opacity="0.5"/>
+  <ellipse cx="1060" cy="190" rx="10" ry="5" fill="none" stroke="#06b6d4" stroke-width="1"/>
+  
+  <!-- Crosshair on face -->
+  <line x1="1060" y1="140" x2="1060" y2="200" stroke="#00ff00" stroke-width="1"/>
+  <line x1="1030" y1="170" x2="1090" y2="170" stroke="#00ff00" stroke-width="1"/>
+  <circle cx="1060" cy="170" r="20" fill="none" stroke="#00ff00" stroke-width="1"/>
+  
+  <!-- Tracking info -->
+  <rect x="940" y="290" width="240" height="130" rx="8" fill="#000" fill-opacity="0.7" stroke="#374151"/>
+  <text x="960" y="315" font-family="Arial" font-size="11" fill="#9ca3af">وضعیت ردیابی:</text>
+  <text x="960" y="335" font-family="Arial" font-size="13" fill="#10b981">✓ صورت شناسایی شد</text>
+  <text x="960" y="360" font-family="Arial" font-size="11" fill="#9ca3af">موقعیت X:</text>
+  <text x="1040" y="360" font-family="Arial" font-size="11" fill="#06b6d4">-0.35</text>
+  <text x="960" y="380" font-family="Arial" font-size="11" fill="#9ca3af">موقعیت Y:</text>
+  <text x="1040" y="380" font-family="Arial" font-size="11" fill="#06b6d4">0.12</text>
+  <text x="960" y="400" font-family="Arial" font-size="11" fill="#9ca3af">فاصله:</text>
+  <text x="1040" y="400" font-family="Arial" font-size="11" fill="#06b6d4">0.8m</text>
+  
+  <!-- Footer -->
+  <rect x="0" y="600" width="1200" height="75" fill="#000" fill-opacity="0.5"/>
+  <text x="600" y="630" font-family="Arial" font-size="13" fill="#9ca3af" text-anchor="middle">Portalgraph - الهام گرفته از تکنولوژی واقعی هولوگرام LCD</text>
+  <text x="600" y="655" font-family="Arial" font-size="12" fill="url(#cyan2)" text-anchor="middle">ایده، طراحی و توسعه: امیرسامان پیرایش‌فر</text>
+</svg>

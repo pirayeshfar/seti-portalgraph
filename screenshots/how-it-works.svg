@@ -1,0 +1,121 @@
+<svg width="1000" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgHow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cyanHow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#06b6d4"/>
+    </marker>
+    <filter id="glowHow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1000" height="500" fill="url(#bgHow)"/>
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial" font-size="24" font-weight="bold" fill="url(#cyanHow)" text-anchor="middle">چگونه Off-axis Projection کار می‌کند؟</text>
+  <text x="500" y="65" font-family="Arial" font-size="14" fill="#94a3b8" text-anchor="middle">How Off-axis Projection Creates the Hologram Effect</text>
+  
+  <!-- Step 1: Face Detection -->
+  <g transform="translate(100, 150)">
+    <rect x="-70" y="-40" width="140" height="180" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="0" y="-15" font-family="Arial" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">۱. تشخیص صورت</text>
+    
+    <!-- Webcam icon -->
+    <rect x="-30" y="10" width="60" height="40" rx="5" fill="#374151" stroke="#06b6d4" stroke-width="2"/>
+    <circle cx="0" cy="30" r="12" fill="#0f172a" stroke="#06b6d4" stroke-width="1"/>
+    <circle cx="0" cy="30" r="6" fill="#06b6d4"/>
+    
+    <!-- Face icon -->
+    <circle cx="0" cy="90" r="25" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+    <circle cx="-8" cy="85" r="3" fill="#8b5cf6"/>
+    <circle cx="8" cy="85" r="3" fill="#8b5cf6"/>
+    <path d="M -10 100 Q 0 110 10 100" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+    
+    <text x="0" y="130" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">Face Tracking</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <line x1="180" y1="220" x2="270" y2="220" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2: Calculate Position -->
+  <g transform="translate(350, 150)">
+    <rect x="-70" y="-40" width="140" height="180" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="0" y="-15" font-family="Arial" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">۲. محاسبه موقعیت</text>
+    
+    <!-- Coordinate system -->
+    <line x1="-40" y1="100" x2="40" y2="100" stroke="#4ade80" stroke-width="2"/>
+    <line x1="0" y1="40" x2="0" y2="120" stroke="#f472b6" stroke-width="2"/>
+    <text x="45" y="105" font-family="Arial" font-size="10" fill="#4ade80">X</text>
+    <text x="5" y="35" font-family="Arial" font-size="10" fill="#f472b6">Y</text>
+    
+    <!-- Point -->
+    <circle cx="20" cy="70" r="8" fill="#06b6d4" filter="url(#glowHow)"/>
+    <text x="35" y="65" font-family="Arial" font-size="9" fill="#06b6d4">(x, y)</text>
+    
+    <!-- Values -->
+    <text x="0" y="130" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">X: -0.3  Y: 0.2</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <line x1="430" y1="220" x2="520" y2="220" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 3: Adjust Frustum -->
+  <g transform="translate(600, 150)">
+    <rect x="-70" y="-40" width="140" height="180" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="0" y="-15" font-family="Arial" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">۳. تنظیم Frustum</text>
+    
+    <!-- Asymmetric frustum visualization -->
+    <polygon points="-10,30 -50,120 50,120 30,30" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <line x1="-10" y1="30" x2="30" y2="30" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,2"/>
+    <line x1="-50" y1="120" x2="50" y2="120" stroke="#f59e0b" stroke-width="2"/>
+    
+    <!-- Eye position -->
+    <circle cx="10" cy="20" r="6" fill="#8b5cf6"/>
+    <text x="25" y="20" font-family="Arial" font-size="9" fill="#8b5cf6">Eye</text>
+    
+    <text x="0" y="135" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">Off-axis Projection</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <line x1="680" y1="220" x2="770" y2="220" stroke="#06b6d4" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 4: Render -->
+  <g transform="translate(850, 150)">
+    <rect x="-70" y="-40" width="140" height="180" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+    <text x="0" y="-15" font-family="Arial" font-size="14" font-weight="bold" fill="#06b6d4" text-anchor="middle">۴. رندر سه‌بعدی</text>
+    
+    <!-- LCD screen -->
+    <rect x="-45" y="20" width="90" height="70" rx="3" fill="#0f172a" stroke="#06b6d4" stroke-width="2"/>
+    
+    <!-- 3D object appearing to pop out -->
+    <g filter="url(#glowHow)">
+      <polygon points="0,35 -20,70 20,70" fill="none" stroke="#06b6d4" stroke-width="2"/>
+      <circle cx="0" cy="45" r="10" fill="none" stroke="#06b6d4" stroke-width="2"/>
+    </g>
+    
+    <!-- Depth effect lines -->
+    <line x1="-35" y1="95" x2="-25" y2="105" stroke="#06b6d4" stroke-width="1" opacity="0.5"/>
+    <line x1="35" y1="95" x2="25" y2="105" stroke="#06b6d4" stroke-width="1" opacity="0.5"/>
+    
+    <text x="0" y="130" font-family="Arial" font-size="10" fill="#94a3b8" text-anchor="middle">Hologram Effect!</text>
+  </g>
+  
+  <!-- Formula box -->
+  <rect x="200" y="360" width="600" height="100" rx="10" fill="#0f172a" stroke="#334155" stroke-width="2"/>
+  <text x="500" y="390" font-family="monospace" font-size="14" fill="#f59e0b" text-anchor="middle">// Off-axis Projection Matrix</text>
+  <text x="500" y="415" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="middle">left = near * (-screenWidth/2 - eyeX) / eyeZ</text>
+  <text x="500" y="435" font-family="monospace" font-size="12" fill="#4ade80" text-anchor="middle">right = near * (screenWidth/2 - eyeX) / eyeZ</text>
+  <text x="500" y="455" font-family="monospace" font-size="12" fill="#94a3b8" text-anchor="middle">camera.projectionMatrix.makePerspective(left, right, top, bottom, near, far)</text>
+  
+  <!-- Credit -->
+  <text x="500" y="485" font-family="Arial" font-size="11" fill="#64748b" text-anchor="middle">SETI@Portalgraph | ایده، طراحی و توسعه: امیرسامان پیرایش‌فر</text>
+</svg>
