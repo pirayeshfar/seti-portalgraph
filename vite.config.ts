@@ -7,12 +7,12 @@ import { defineConfig } from "vite";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: command === 'build' ? "/seti-portalgraph/" : "/",
+  base: "/seti-portalgraph/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
   },
-}));
+});
