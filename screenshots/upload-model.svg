@@ -43,7 +43,7 @@
   </g>
   
   <text x="600" y="330" font-family="Arial" font-size="14" fill="#9ca3af" text-anchor="middle">فایل خود را اینجا رها کنید یا کلیک کنید</text>
-  <text x="600" y="355" font-family="Arial" font-size="12" fill="#6b7280" text-anchor="middle">Drag & drop your file here or click to browse</text>
+  <text x="600" y="355" font-family="Arial" font-size="12" fill="#6b7280" text-anchor="middle">Drag and drop your file here or click to browse</text>
   
   <!-- Supported Formats -->
   <rect x="340" y="390" width="520" height="80" rx="8" fill="#111827"/>
