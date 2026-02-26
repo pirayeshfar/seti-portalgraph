@@ -14,8 +14,6 @@
 
 <br/>
 
-[**🚀 تست آنلاین (Live Demo)**](#demo)&nbsp;&nbsp;•&nbsp;&nbsp;[**📖 مستندات**](#documentation)&nbsp;&nbsp;•&nbsp;&nbsp;[**🎬 ویدیو**](#video)
-
 <br/>
 
 > **این پروژه از تکنولوژی واقعی [Portalgraph](https://portalgraph.com) الهام گرفته شده است.**
@@ -35,7 +33,7 @@
 
 ### برای تست برنامه کلیک کنید:
 
-[![Live Demo](https://img.shields.io/badge/🔮_Live_Demo-Click_Here-06b6d4?style=for-the-badge&labelColor=1f2937)](https://your-username.github.io/seti-portalgraph/)
+[![Live Demo](https://img.shields.io/badge/🔮_Live_Demo-Click_Here-06b6d4?style=for-the-badge&labelColor=1f2937)](https://pirayeshfar.github.io/seti-portalgraph/)
 
 </td>
 </tr>
@@ -288,7 +286,7 @@ npm run lint     # بررسی کد
 
 <br/>
 
-[![GitHub stars](https://img.shields.io/github/stars/your-username/seti-portalgraph?style=social)](https://github.com/your-username/seti-portalgraph)
+[![GitHub stars](https://img.shields.io/github/stars/pirayeshfar/seti-portalgraph?style=social)](https://github.com/pirayeshfar/seti-portalgraph)
 
 <br/>
 
